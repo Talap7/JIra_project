@@ -1,0 +1,12 @@
+.sidebar {
+
+    width: 1vw;
+    background: red;
+    height: 100vh;
+}
+
+.sidebar.active {
+    width: 15vw;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
