@@ -8,7 +8,7 @@ export const TextField = ({ label, name, type, value, onChange, error }) => {
     }
 
     return (
-        <div className='mt-5'>
+        <div>
             <label htmlFor={name} className="block text-left font-thin">{label}</label>
             <div className="flex">
                 <input

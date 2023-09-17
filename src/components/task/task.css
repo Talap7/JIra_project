@@ -1,0 +1,61 @@
+.task__block {
+    background-color: rgb(241 245 249);
+    color: rgb(30 41 59);
+    border: 1px solid;
+    border-color: white;
+    border-radius: 10px;
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+}
+
+.task_title {
+    padding: 4px 0 4px 10px;
+    margin-bottom: 7px;
+}
+
+.task_content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.task {
+    border-color: rgb(51 65 85);
+    margin: 3px;
+    padding: 2px 2px 2px 8px;
+    border-radius: 5px;
+    background-color: white;
+    font-weight: thin;
+    font-size: 10px;
+}
+
+.add_task_button {
+    display: none;
+}
+
+.add_task_button.active {
+    display: block;
+    width: 90%;
+    padding: 4px 0 4px 8px;
+    font-weight: thin;
+    font-size: 12px;
+    border-radius: 5px;
+    transition: 0.5s;
+    margin: 3px;
+}
+
+.add_task_button:hover {
+    background-color: rgb(226 232 240);
+
+}
+
+.drop_down {
+    display: none;
+    padding: 0 2px 0 2px;
+    margin: 0;
+}
+
+.drop_down.active {
+    display: block;
+}

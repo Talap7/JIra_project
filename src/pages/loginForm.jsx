@@ -1,9 +1,11 @@
 import React, { useState } from "react"
 import { TextField } from "../form/textField"
 import gitlab from "../image/gitlab.png"
+import { useNavigate } from "react-router-dom"
 
 export const LoginForm = () => {
     const [data, setData] = useState({ email: "", password: "" })
+    const navigate = useNavigate()
 
     const handleChange = ({ target }) => {
         setData(prevState => ({ ...prevState, [target.name]: target.value }))
@@ -33,7 +35,7 @@ export const LoginForm = () => {
                     </form>
                     <div className="text-end">
                         <button type="button" className="text-xs font-thin mr-5">Forgot password?</button>
-                        <button type="button" className=" bg-gradient rounded-full text-white w-full mt-5 h-10">Войти</button>
+                        <button type="button" className=" bg-gradient rounded-full text-white w-full mt-5 h-10" onClick={() => navigate("/cabinet")}>Войти</button>
                     </div>
                     <div>
                         <p className="mt-5">Or sign In using</p>

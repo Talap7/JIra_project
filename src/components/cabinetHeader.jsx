@@ -13,9 +13,9 @@ export const CabinetHeader = () => {
         setData(prevState => ({ ...prevState, [target.name]: target.value }))
     }
     return (<>
-        <div className="w-full bg-slate-700 font-thin text-white mb-5">
+        <div className="w-full bg-slate-700  font-thin text-white border border-gray-950">
             <header className='flex justify-between items-center h-9 px-5'>
-                <div className='flex justify-between items-center'>
+                <div className='flex justify-between items-center '>
                     <img src={logo} alt="logo" className="w-8 h-8" onClick={() => navigate("/")} />
                     <nav className='ml-20'>
                         <ul className='flex'>
@@ -38,7 +38,7 @@ export const CabinetHeader = () => {
             <div className="flex ">
                 <div className="w-6/12 mr-5 text-black">
                     <h3 className="mb-3">Создайте рабочее пространство</h3>
-                    <p className="font-thin text-xs">Повысьте производительность: участники команды смогут получать удобный доступ ко всем доскам.</p>
+                    <p className="font-thin text-xs mb-5">Повысьте производительность: участники команды смогут получать удобный доступ ко всем доскам.</p>
                     <TextField
                         label="Название рабочего пространства"
                         name="project"
@@ -46,7 +46,10 @@ export const CabinetHeader = () => {
                         value={data.project}
                         onChange={handleChange}
                     />
-                    <button type="button" className="mt-20 w-full bg-slate-700 h-10 text-white rounded" onClick={() => navigate("/cabinet/workspace")}>Продолжить</button>
+                    <button type="button" className="mt-20 w-full bg-slate-700 h-10 text-white rounded" onClick={() =>{
+                        navigate("/cabinet/workspace")
+                        setModalActive(false)
+                    }}>Продолжить</button>
                 </div>
                 <div className="flex items-center justify-center">
                     <img src={desk} alt="desk" />
